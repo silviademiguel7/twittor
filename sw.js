@@ -49,7 +49,7 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(respuesta);
 });
 
-self.addEventListener("fectch", (e) => {
+self.addEventListener("fetch", (e) => {
   const respuesta = caches.match(e.request).then((res) => {
     if (res) {
       return res;
